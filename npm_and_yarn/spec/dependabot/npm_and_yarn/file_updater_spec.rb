@@ -1097,6 +1097,8 @@ RSpec.describe Dependabot::NpmAndYarn::FileUpdater do
 
           # TODO: Change this to 2.0.1 once npm supports updating to specific
           # sub dependency versions
+          # NPM v8 https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides
+          # PR doing the npm7 --> npm8 change: https://github.com/dependabot/dependabot-core/pull/4763#issue-1149377633
           expect(parsed_package1_npm_lock["dependencies"]["extend"]["version"]).
             to eq("2.0.2")
         end
@@ -2842,6 +2844,7 @@ RSpec.describe Dependabot::NpmAndYarn::FileUpdater do
 
             # TODO: Change this to 2.0.1 once npm supports updating to specific
             # sub dependency versions
+            # NPM v8 https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides
             expect(parsed_package1_npm_lock["dependencies"]["extend"]["version"]).
               to eq("2.0.2")
           end

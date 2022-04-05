@@ -90,6 +90,7 @@ resource "aws_cloudfront_distribution" "default" {
     target_origin_id = module.distribution_label.id
     compress         = var.compress
     forwarded_values {
+      # TODO is there something here?
       # TF-UPGRADE-TODO: In Terraform v0.10 and earlier, it was sometimes necessary to
       # force an interpolation expression to be interpreted as a list by wrapping it
       # in an extra set of list brackets. That form was supported for compatibility in
