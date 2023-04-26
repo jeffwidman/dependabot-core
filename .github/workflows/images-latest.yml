@@ -1,11 +1,13 @@
-name: Latest images
+name: Publish latest ecosystem images
+run-name: my test run name
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   UPDATER_IMAGE: "ghcr.io/dependabot/dependabot-updater-"
 on:
   push:
     branches:
-      - main
+      # - main
+      - experiment-with-run-name
     paths-ignore:
       - "CHANGELOG.md"
       - "common/lib/dependabot.rb"
